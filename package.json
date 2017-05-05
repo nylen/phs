@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.0",
+    "chai": "^3.5.0",
+    "cross-env": "^3.2.4",
+    "dirty-chai": "^1.2.2",
+    "eslint": "^3.8.1",
+    "eslint-config-wordpress": "^1.1.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.6.0",
+    "jsdom": "^9.4.1",
+    "mocha": "^3.2.0",
+    "parse5": "^3.0.2",
+    "react": "^15.5.4",
+    "resolve-entry-modules-webpack-plugin": "^1.0.0",
+    "sinon-chai": "^2.9.0",
+    "tinymce": "^4.5.7",
+    "webpack": "^2.2.1",
+    "webpack-node-externals": "^1.5.4",
+    "xregexp": "^3.2.0"
+  },
+  "scripts": {
+    "test-unit": "cross-env NODE_ENV=test webpack && mocha build --require bootstrap-test.js",
+    "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack",
+    "lint": "eslint .",
+    "dev": "cross-env BABEL_ENV=default webpack --watch",
+    "test": "npm run lint && npm run test-unit"
+  }
+}

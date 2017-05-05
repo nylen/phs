@@ -1,0 +1,29 @@
+{
+	"presets": [
+		[ "latest", {
+			"es2015": {
+				"modules": false
+			}
+		} ]
+	],
+	"plugins": [
+		"lodash",
+		"transform-object-rest-spread",
+		[ "./lib/babel-plugin-transform-jsx-flexible", {
+			pragma: 'createSchemaElement.default',
+			tags: {
+				RawHTML: 'FakeDOM.createFakeDOMTree',
+			}
+		} ]
+	],
+	"env": {
+		"default": {
+			"plugins": [
+				"transform-runtime"
+			]
+		},
+		"test": {
+			"presets": [ "latest" ]
+		}
+	}
+}

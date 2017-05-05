@@ -1,0 +1,64 @@
+## `phs` (Parameterized HTML Schemas)
+
+This is a library that can be used to describe and validate chunks of HTML.  It
+is inspired by
+[RELAX NG](http://relaxng.org/),
+but with a few very different goals.  `phs` schemas are designed to:
+
+- Accept placeholders for parameters, so that schemas can also be used to
+  serialize and deserialize chunks of data to/from HTML.
+- Be more concise and easier to author/read/understand than the full RELAX NG
+  specification.
+- Resemble the HTML they describe and be easily expressible in JSX notation.
+
+**Note:** Currently this library contains the *bare minimum to be at all useful*.
+
+## How to use
+
+Currently it's recommended to use JSX with the included
+[`transform-jsx-flexible` Babel plugin](lib/babel-plugin-transform-jsx-flexible.js).
+This allows you to continue using React or `phs` schemas within the same file.
+
+Configure the plugin as follows in your `.babelrc`:
+
+```js
+"plugins": [
+    ...
+    [ "./lib/babel-plugin-transform-jsx-flexible", {
+        tags: {
+            Schema: 'createSchemaElement',
+        }
+    } ],
+    ...
+]
+```
+
+In your JSX code files:
+
+```js
+import { createSchemaElement, Schema, Element } from 'phs';
+
+const schema = (
+    <Schema>
+        <Element name="p" />
+    </Schema>
+);
+
+const fragment = /* DOM fragment or similar object returned by a parser */;
+
+const result = schema.validateFragment( fragment );
+
+console.log( result ); // either `true` or an `Error`
+```
+
+There are also a couple of validation functions other than `validateFragment`:
+
+- `validateNodes( arrayOfNodes )`
+- `validateNode( singleNode )`
+
+## Schema elements
+
+### `<Element name="tagName">`
+
+Matches a single HTML element with the tag name `tagName`.  `tagName` can also
+be a string like `'p|span'` to provide a choice between multiple tag names.
