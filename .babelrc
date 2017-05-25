@@ -7,7 +7,6 @@
 		} ]
 	],
 	"plugins": [
-		"lodash",
 		"transform-object-rest-spread",
 		[ "transform-jsx-flexible", {
 			pragma: 'createSchemaElement.default',
