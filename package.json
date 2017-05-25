@@ -1,4 +1,23 @@
 {
+  "name": "phs",
+  "author": "James Nylen <jnylen@gmail.com>",
+  "description": "Parameterized HTML Schemas - A toolset to validate and deserialize/serialize structured HTML.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nylen/phs"
+  },
+  "bugs": {
+    "url": "https://github.com/nylen/phs/issues"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "parameterized",
+    "HTML",
+    "schema",
+    "RELAX NG"
+  ],
+  "main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.24.1",
