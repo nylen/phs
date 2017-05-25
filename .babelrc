@@ -9,7 +9,7 @@
 	"plugins": [
 		"lodash",
 		"transform-object-rest-spread",
-		[ "./lib/babel-plugin-transform-jsx-flexible", {
+		[ "transform-jsx-flexible", {
 			pragma: 'createSchemaElement.default',
 			tags: {
 				RawHTML: 'FakeDOM.createFakeDOMTree',
