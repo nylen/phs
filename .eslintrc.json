@@ -2,8 +2,7 @@
 	"root": true,
 	"parser": "babel-eslint",
 	"extends": [
-		"wordpress",
-		"plugin:jsx-a11y/recommended"
+		"wordpress"
 	],
 	"env": {
 		"browser": true,
@@ -21,8 +20,7 @@
 		"tinymce": true
 	},
 	"plugins": [
-		"react",
-		"jsx-a11y"
+		"react"
 	],
 	"settings": {
 		"react": {
