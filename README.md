@@ -7,6 +7,7 @@ but with a few very different goals.  `phs` schemas are designed to:
 
 - Accept placeholders for parameters, so that schemas can also be used to
   serialize and deserialize chunks of data to/from HTML.
+  _Not implemented yet._
 - Be more concise and easier to author/read/understand than the full RELAX NG
   specification.
 - Resemble the HTML they describe and be easily expressible in JSX notation.
