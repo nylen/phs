@@ -12,7 +12,10 @@ const config = {
 	output: {
 		filename: 'build/index.js',
 		path: __dirname,
+		library: 'phs',
+		libraryTarget: 'umd',
 	},
+	target: 'node',
 	module: {
 		rules: [
 			{
@@ -42,11 +45,11 @@ const config = {
 
 switch ( process.env.NODE_ENV ) {
 	case 'production':
-		config.plugins.push( new webpack.optimize.UglifyJsPlugin() );
+		// TODO this causes "Error: Invalid schema tag name: t"
+		// config.plugins.push( new webpack.optimize.UglifyJsPlugin() );
 		break;
 
 	case 'test':
-		config.target = 'node';
 		config.externals = [ require( 'webpack-node-externals' )() ];
 		config.output = {
 			filename: 'build/test.js',
