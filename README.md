@@ -16,9 +16,10 @@ but with a few very different goals.  `phs` schemas are designed to:
 
 ## How to use
 
-Currently it's recommended to use JSX with the included
-[`transform-jsx-flexible` Babel plugin](lib/babel-plugin-transform-jsx-flexible.js).
-This allows you to continue using React or `phs` schemas within the same file.
+Currently it's recommended to use JSX with the
+[`transform-jsx-flexible` Babel plugin](https://github.com/nylen/babel-plugin-transform-jsx-flexible).
+If you're using React, for example, this allows you to continue using React
+elements along with `phs` schemas within the same file.
 
 Configure the plugin as follows in your `.babelrc`:
 
