@@ -2,7 +2,7 @@
   "name": "phs",
   "author": "James Nylen <jnylen@gmail.com>",
   "description": "Parameterized HTML Schemas - A toolset to validate and deserialize/serialize structured HTML.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/nylen/phs"
