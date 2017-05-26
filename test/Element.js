@@ -94,13 +94,7 @@ describe( 'Element#constructor', () => {
 	} );
 } );
 
-describe( 'Element single node schema', () => {
-	const singleNodeSchema = (
-		<Schema>
-			<Element name="p" />
-		</Schema>
-	);
-
+function testSingleNodeSchema( singleNodeSchema ) {
 	it( 'should validate a simple tag', () => {
 		const result = singleNodeSchema.validateFragment(
 			<RawHTML>
@@ -155,6 +149,22 @@ describe( 'Element single node schema', () => {
 			+ 'Schema element has no children, but child HTML elements found.'
 		);
 	} );
+}
+
+describe( 'Element single node schema', () => {
+	testSingleNodeSchema(
+		<Schema>
+			<Element name="p" />
+		</Schema>
+	);
+} );
+
+describe( 'Element single node schema (shorthand syntax)', () => {
+	testSingleNodeSchema(
+		<Schema>
+			<p />
+		</Schema>
+	);
 } );
 
 describe( 'Element multi node schema', () => {
