@@ -63,3 +63,20 @@ There are also a couple of validation functions other than `validateFragment`:
 
 Matches a single HTML element with the tag name `tagName`.  `tagName` can also
 be a string like `'p|span'` to provide a choice between multiple tag names.
+
+There is also a shorthand for `<Element>` that is designed to more closely
+resemble the HTML it describes.  These two constructions are equivalent:
+
+```js
+const schema1 = (
+    <Schema>
+        <Element name="div" />;
+    </Schema>
+);
+
+const schema2 = (
+    <Schema>
+        <div />
+    </Schema>
+);
+```
