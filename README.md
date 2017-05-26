@@ -1,4 +1,4 @@
-## `phs` (Parameterized HTML Schemas)
+## `phs` (Parameterized HTML Schemas) [![Build status](https://img.shields.io/travis/nylen/phs.svg?style=flat)](https://travis-ci.org/nylen/phs) [![npm package](http://img.shields.io/npm/v/phs.svg?style=flat)](https://www.npmjs.org/package/phs)
 
 This is a library that can be used to describe and validate chunks of HTML.  It
 is inspired by
